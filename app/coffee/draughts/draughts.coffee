@@ -47,7 +47,7 @@ class Draughts
 
     # If there's a piece, it's an ennemy!
     ennemyAttacked = newCase.piece?
-    newCase.removePiece destroy
+    newCase.removePiece ennemyAttacked
     @board.updateTeams()
 
     # Remove player piece from old case
