@@ -104,8 +104,7 @@ class Piece
       return false
 
     if caseToTest.piece?
-      if caseToTest.piece.type.team == @type.team
-        return false
+      return false
 
     return true
 

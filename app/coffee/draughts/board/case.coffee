@@ -5,6 +5,10 @@ debugThemes = require '../../utils/debug-themes.coffee'
 
 CasePossibility = require './case-possibility.coffee'
 
+Direction = require '../../utils/direction.coffee'
+
+Coordinates = require '../../utils/coordinates.coffee'
+
 class Case
   constructor: (game, board, boardCoords, gameCoords, themes) ->
     assert board?, "Board missing"
@@ -17,6 +21,11 @@ class Case
     @gameCoords = gameCoords
 
     @possibility = new CasePossibility @game, @, themes
+
+
+  getNeighbourAt: (direction) ->
+    neighbourCoords = Coordinates.Add @boardCoords, direction.value
+    return @board.getCaseAtBoardCoords neighbourCoords
 
 
   setPiece: (piece) ->

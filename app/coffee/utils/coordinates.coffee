@@ -77,6 +77,13 @@ class Coordinates
     return @x == coordsB.x and @y == coordsB.y
 
 
+  getInverse: ->
+    inverse = @clone()
+    inverse.x *= -1
+    inverse.y *= -1
+    return inverse
+
+
   clone: ->
     return new Coordinates @x, @y
 

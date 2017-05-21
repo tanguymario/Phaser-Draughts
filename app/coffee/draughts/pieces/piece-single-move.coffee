@@ -12,6 +12,11 @@ class PieceSingleMove extends Piece
     super game, board, currCase, type, theme
 
 
+  getAttacksFromCoords: (coords) ->
+    bestAttackMoves = []
+    for 
+
+
   getMovesFromCoords: (coords) ->
     tempCases = []
     for coord in coords
